@@ -17,9 +17,20 @@ plugins {
 repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
+    maven("https://jitpack.io")
 }
 
 dependencies {
+    // please look at https://jitpack.io/#drieks/antlr-kotlin to find the latest version
+    api("com.github.kotlinx.ast:grammar-kotlin-parser-antlr-kotlin:14e92f2fa0")
+    // https://jitpack.io/#drieks/antlr-kotlin suggested 
+    // implementation("com.github.drieks:antlr-kotlin:Tag")
+    // also does not work
+    // see https://github.com/kotlinx/ast/issues/63
+
+    // ---------------------
+    // dependencies below added by ./gradlew init
+
     // Align versions of all Kotlin components
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
 
